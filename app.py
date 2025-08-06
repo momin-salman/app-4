@@ -34,7 +34,7 @@ print("Loading environment variables...")
 load_dotenv(verbose=True)  # Add verbose=True to see loading details
 
 # Debug: Print environment variable status
-api_key = os.getenv("BRIA_API_KEY")
+api_key = st.secrets.get("BRIA_API_KEY")
 print(f"API Key present: {bool(api_key)}")
 print(f"API Key value: {api_key if api_key else 'Not found'}")
 print(f"Current working directory: {os.getcwd()}")
